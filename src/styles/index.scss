@@ -1,4 +1,5 @@
 @import './normalize.scss';
+@import url("./font/stylesheet.css");
 @import '..//pages/Header/header.scss';
 @import './main.scss';
-@import url("./font/stylesheet.css")
+@import '../components/Markup/Markup.scss'

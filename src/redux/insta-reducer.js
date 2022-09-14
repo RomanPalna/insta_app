@@ -2,14 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import { fetchInsta } from "./insta-operations";
 
-// const likes = createReducer([], {
-//   [fetchInsta.fulfilled]: (__, action) => {
-//     __ = action.payload.data.Instagram.Likes.plans;
-//   },
-// });
-
 const initialState = {
   likes: [],
+  followers: [],
+  comments: [],
+  views: [],
+  autoLikes: [],
 };
 
 const slice = createSlice({
@@ -22,7 +20,18 @@ const slice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchInsta.fulfilled, (state, action) => {
-      state.likes = action.payload;
+      console.log(action.payload.data.Instagram);
+
+      const { Likes, Views, Comments, Followers, ...other } =
+        action.payload.data.Instagram;
+
+      console.log(action.payload);
+
+      state.likes = Likes.plans;
+      state.followers = Followers.plans;
+      state.comments = Comments.plans;
+      state.views = Views.plans;
+      state.autoLikes = other["Auto-Likes"].plans;
     });
   },
 });

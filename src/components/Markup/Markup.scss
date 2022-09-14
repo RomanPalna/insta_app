@@ -1,0 +1,149 @@
+.card {
+    
+ width: 260px;
+ text-align: center;
+ margin: 27px 30px 0 0 ;
+ padding: 49px 17px 16px;
+ background: #FFFFFF;
+ box-shadow: 0px 8px 23px rgba(213, 212, 240, 0.67);
+ border-radius: 9px;
+
+ &__container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 290px;
+ }
+
+    &__likes {
+        position: relative;
+        font-family: 'Mazzard';
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 35px;
+        text-align: center;
+        color: #E0B6FD;
+        font-style: normal;
+        }
+    &__likes:before {
+        position: absolute;
+        display: block;
+        content: url('../../pictures/left-icon.png');
+        top: -40%;
+            right: 90%;
+    }
+
+    &__likes::after {
+        position: absolute;
+        display: block;
+        content: url('../../pictures/right-icon.png');
+        top: -37%;
+            right: -25%;
+    }
+
+
+    &__discription {
+        margin: 0;
+        font-family: 'Mazzard';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+        color: #19224C;
+    }
+
+    &__text {
+        position: relative;
+        list-style: none;
+        padding: 0 45px;
+        text-align: left;
+
+        &--dscr {
+            font-family: 'Mazzard';
+            font-style: bold;
+            font-weight: 400;
+            font-size: 18px;
+            color: #AB81ED;
+        }
+
+        &--item {
+            
+            font-family: 'Mazzard';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 36px;
+                color: #19224C
+        }
+
+        &--item:not(:last-child) {
+            border-bottom: 1px solid #E7E7FB;;
+        }
+
+        &--item:before {
+            position: absolute;
+            content: url('../../pictures/done.png');
+            left: 9%;
+        }
+    }
+
+    &__price {
+        list-style: none;
+        display: flex;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: space-around;
+        align-items: center;
+
+        &--before {
+            font-family: 'Mazzard';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                text-align: center;
+                color: #D4AAFE;
+                text-decoration: line-through;
+        }
+
+        &--after {
+            font-family: 'Mazzard';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 45px;
+                text-align: center;
+                color: #19224C;
+        }
+    }
+
+    &__button {
+        background: linear-gradient(91.71deg, #9B70F1 17.51%, #D3A9FD 90.5%);
+        border: 1px solid #AB81ED;
+        box-shadow: inset 0px 2px 9px rgba(0, 0, 0, 0.25);
+        border-radius: 7px;
+        padding: 5px 99px;
+        font-family: 'Mazzard';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 36px;
+        color: #FFFFFF;    
+    
+    }
+
+    &__button:focus,
+    &__button:hover {
+        background: #FFFFFF;
+        box-shadow: 0px 8px 23px rgba(213, 212, 240, 0.67);
+        color: #AB81ED
+
+         
+    }
+
+    
+}
+
+.card:nth-child(3n) {
+    margin-right: 0;
+}
