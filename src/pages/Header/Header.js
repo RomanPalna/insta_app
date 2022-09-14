@@ -1,17 +1,44 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../../pictures/logo.png";
 
 export default function Header() {
   return (
-    <div>
-      <NavLink to="/">
+    <div className="header">
+      <Link to="/" className="header__logo">
         <img src={logo} alt="logo" />
-      </NavLink>
-      <NavLink to="likes">Buy Instagram Likes</NavLink>
-      <NavLink to="followers">Buy Instagram Followers</NavLink>
-      <NavLink to="views">Buy Instagram Views</NavLink>
-      <NavLink to="comments">Buy Instagram Сomments</NavLink>
-      <NavLink to="automatic">Buy Instagram Automatic</NavLink>
+      </Link>
+      <div className="header__nav">
+        <NavLink
+          to="likes"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
+          Buy Instagram Likes
+        </NavLink>
+        <NavLink
+          to="followers"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
+          Buy Instagram Followers
+        </NavLink>
+        <NavLink
+          to="views"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
+          Buy Instagram Views
+        </NavLink>
+        <NavLink
+          to="comments"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
+          Buy Instagram Сomments
+        </NavLink>
+        <NavLink
+          to="automatic"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
+          Buy Instagram Automatic
+        </NavLink>
+      </div>
     </div>
   );
 }

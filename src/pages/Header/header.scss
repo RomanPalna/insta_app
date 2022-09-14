@@ -1,0 +1,55 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1170px;
+    width: 100%;
+    margin: 42px auto 18px;
+
+    &__logo {
+        margin: 0;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+
+        
+    }
+}
+.inactive {
+    text-decoration: none;
+    display: block;
+    width: 116px;
+    font-family: 'Mazzard';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.active {
+    position: relative;
+    text-decoration: none;
+        display: block;
+        width: 116px;
+        font-family: 'Mazzard';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+}
+
+.active:before {
+    position: absolute;
+    content: '';
+    width: 38px;
+    height: 5px;
+    background: linear-gradient(91.71deg, #9B70F1 17.51%, #D3A9FD 90.5%);
+    border: 1px solid #FFFFFF;
+    border-radius: 7px;
+    bottom: -9px;
+    left: 0;
+}
