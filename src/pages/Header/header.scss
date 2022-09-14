@@ -16,6 +16,12 @@
 
         
     }
+
+    &__user {
+        padding: 12px 15px;
+        border: 1px solid #AB81ED;
+            border-radius: 7px;
+    }
 }
 .inactive {
     text-decoration: none;
@@ -53,3 +59,61 @@
     bottom: -9px;
     left: 0;
 }
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 780px) {
+    .header {
+       flex-direction: row-reverse;
+
+        &__nav {
+            display: none;
+        }
+
+        &__logo {
+            margin: 0 auto;
+        }
+
+        &__user {
+            margin: 0 auto;
+        }
+
+        
+    }
+
+        .hamburger {
+            margin: 0 auto;
+            display: block;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    
+        .hamburger .line {
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: black;
+            margin-block: 10px;
+            border-radius: 4px;
+            transition: transform 0.5s, opacity 0.25s;
+    
+        }
+    
+        .hamburger.active_btn .line:nth-child(1) {
+            transform: translateY(13px) rotate(45deg);
+        }
+    
+        .hamburger.active_btn .line:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .hamburger.active_btn .line:nth-child(3) {
+            transform: translateY(-13px) rotate(-45deg);
+        }
+}
+
+  

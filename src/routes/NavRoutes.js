@@ -14,6 +14,7 @@ export default function NavBar() {
           path="automatic"
           element={<div>Automatic Instagram Likes</div>}
         />
+        <Route path="user" element={<div>User</div>} />
       </Routes>
     </>
   );
