@@ -1,0 +1,30 @@
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 55px;
+    height: 60px;
+}
+
+.slick-arrow.slick-prev {
+    left: -90px;
+    background: url("../../pictures/arrow-left.png") no-repeat;
+}
+
+ .slick-arrow.slick-next {
+    right: -90px;
+    background: url("../../pictures/arrow-rght.png") no-repeat;
+}
+
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next:before {
+    display: none;
+}

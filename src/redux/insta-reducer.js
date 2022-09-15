@@ -25,8 +25,6 @@ const slice = createSlice({
       const { Likes, Views, Comments, Followers, ...other } =
         action.payload.data.Instagram;
 
-      console.log(action.payload);
-
       state.likes = Likes.plans;
       state.followers = Followers.plans;
       state.comments = Comments.plans;
