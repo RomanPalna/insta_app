@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import * as instaOperations from "./redux/insta-operations";
 import Header from "./pages/Header/Header";
 import NavBar from "./routes/NavRoutes";
-import * as instaOperations from "./redux/insta-operations";
+import InputComment from "./components/InputComment/InputComment";
 
 function App() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <Header />
       <NavBar />
+      <InputComment />
     </div>
   );
 }
