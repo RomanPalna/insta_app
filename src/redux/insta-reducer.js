@@ -13,11 +13,7 @@ const initialState = {
 const slice = createSlice({
   initialState,
   name: "Service",
-  reducers: {
-    saveServise: (state, action) => {
-      state.likes = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchInsta.fulfilled, (state, action) => {
       console.log(action.payload.data.Instagram);

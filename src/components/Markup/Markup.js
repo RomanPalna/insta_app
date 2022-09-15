@@ -1,6 +1,4 @@
-export default function LikesMarkup({ data }) {
-  const { count, price } = data;
-
+export default function Markup({ service: { count, price } }) {
   return (
     <div className="card">
       <span className="card__likes">{count}</span>

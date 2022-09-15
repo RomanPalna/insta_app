@@ -3,6 +3,14 @@ import { NavLink, Link } from "react-router-dom";
 import logo from "../../pictures/logo.png";
 import user from "../../pictures/user.png";
 
+const ROUTES = [
+  ["likes", "Likes"],
+  ["followers", "Followers"],
+  ["automatic", "Auto Likes"],
+  ["views", "Views"],
+  ["comments", "Comment"],
+];
+
 export default function Header() {
   const [menuActive, setMenuActive] = useState(false);
 
@@ -28,36 +36,14 @@ export default function Header() {
       </Link>
 
       <div className="header__nav">
-        <NavLink
-          to="likes"
-          className={({ isActive }) => (isActive ? "active" : "inactive")}
-        >
-          Buy Instagram Likes
-        </NavLink>
-        <NavLink
-          to="followers"
-          className={({ isActive }) => (isActive ? "active" : "inactive")}
-        >
-          Buy Instagram Followers
-        </NavLink>
-        <NavLink
-          to="views"
-          className={({ isActive }) => (isActive ? "active" : "inactive")}
-        >
-          Buy Instagram Views
-        </NavLink>
-        <NavLink
-          to="comments"
-          className={({ isActive }) => (isActive ? "active" : "inactive")}
-        >
-          Buy Instagram Сomments
-        </NavLink>
-        <NavLink
-          to="automatic"
-          className={({ isActive }) => (isActive ? "active" : "inactive")}
-        >
-          Buy Instagram Automatic
-        </NavLink>
+        {ROUTES.map(([route, name]) => (
+          <NavLink
+            to={route}
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+          >
+            {name}
+          </NavLink>
+        ))}
       </div>
 
       <Link to="user" className="header__user">

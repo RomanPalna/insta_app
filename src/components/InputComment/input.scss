@@ -7,7 +7,6 @@
     padding: 34px 47px;
 
     &__title {
-        font-family: 'Mazzard';
         font-style: normal;
         font-weight: 600;
         font-size: 24px;
@@ -35,7 +34,6 @@
        &--text {
         margin: 0 0 0 12px;
         text-align: center;
-        font-family: 'Mazzard';
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
@@ -79,7 +77,6 @@
             box-shadow: inset 0px 2px 9px rgba(0, 0, 0, 0.25);
             border-radius: 7px;
 
-            font-family: 'Mazzard';
             font-style: normal;
             font-weight: 700;
             font-size: 18px;
@@ -90,4 +87,30 @@
             width: 228px;
             height: 42px;
     }
+
+    &__comment {
+        display: flex;
+        flex-direction: column;
+        
+
+            &--textarea {
+                width: 609px;
+                    height: 152px;
+                    background: #F9F9F9;
+                        border-radius: 7px;
+                        padding: 12px 15px;
+            }
+
+            &--label {
+                font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #414141;
+                    margin: 0 0 7px;
+            }
+    }
+
+   
 }

@@ -1,12 +1,16 @@
 .card {
     
- width: 260px;
+ width: 80%;
  text-align: center;
- margin: 27px 30px 0 0 ;
+ margin: 27px 8px 0 16px ;
  padding: 49px 17px 16px;
  background: #FFFFFF;
  box-shadow: 0px 8px 23px rgba(213, 212, 240, 0.67);
  border-radius: 9px;
+
+&:nth-child(3n) {
+    margin: 27px 0px 0 0px
+}
 
  &__container {
     // display: flex;
@@ -16,7 +20,6 @@
 
     &__likes {
         position: relative;
-        font-family: 'Mazzard';
         font-weight: 700;
         font-size: 48px;
         line-height: 35px;
@@ -43,7 +46,6 @@
 
     &__discription {
         margin: 0;
-        font-family: 'Mazzard';
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
@@ -59,7 +61,6 @@
         text-align: left;
 
         &--dscr {
-            font-family: 'Mazzard';
             font-style: bold;
             font-weight: 400;
             font-size: 18px;
@@ -68,12 +69,11 @@
 
         &--item {
             
-            font-family: 'Mazzard';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 36px;
-                color: #19224C
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 36px;
+            color: #19224C
         }
 
         &--item:not(:last-child) {
@@ -96,24 +96,22 @@
         align-items: center;
 
         &--before {
-            font-family: 'Mazzard';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 25px;
-                text-align: center;
-                color: #D4AAFE;
-                text-decoration: line-through;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: #D4AAFE;
+            text-decoration: line-through;
         }
 
         &--after {
-            font-family: 'Mazzard';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 32px;
-                line-height: 45px;
-                text-align: center;
-                color: #19224C;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 45px;
+            text-align: center;
+            color: #19224C;
         }
     }
 
@@ -123,7 +121,6 @@
         box-shadow: inset 0px 2px 9px rgba(0, 0, 0, 0.25);
         border-radius: 7px;
         padding: 5px 99px;
-        font-family: 'Mazzard';
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
