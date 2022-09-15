@@ -8,16 +8,33 @@ export default function Service({ service: serviceType }) {
 
   const settings = {
     className: "center",
-    // arrows: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     dots: false,
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 3,
+    slidesToScroll: 3,
     speed: 500,
     rows: 2,
     slidesPerRow: 1,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          rows: 1,
+        },
+      },
+    ],
   };
 
   return (

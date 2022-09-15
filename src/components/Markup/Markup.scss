@@ -147,3 +147,10 @@
 .card:nth-child(3n) {
     margin-right: 0;
 }
+
+
+@media screen and (max-width: 1140px) {
+    .card__container {
+        padding: 27px 89px;
+        }
+}
